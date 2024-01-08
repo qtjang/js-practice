@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+        <script>
+            var input1 = prompt("가장 좋아하는 숫자를 입력해 주세요");
+            var n1 = Number(input1);
+            var input2 = prompt("그 다음으로 좋아하는 숫자를 입력해 주세요");
+            var n2 = Number(input2);
+            console.log("두 개의 숫자는" + n1 + "와" + n2 +"입니다.");
+            console.log(n1+"+"+n2+"="+(n1+n2));
+            console.log(n1+"-"+n2+"="+(n1-n2));
+            console.log(n1+"x"+n2+"="+(n1*n2));
+            console.log(n1+"/"+n2+"="+(n1/n2));
+            var input3 = prompt("몸무게(kg)를 입력해주세요");
+            var wght = Number(input3);
+            var input4 = prompt("키(cm)를 입력해주세요");
+            var hght_cm = Number(input4);
+            var hght_m = hght_cm/100;
+            var hght_m_sq = hght_m*hght_m;
+            var bmi = wght/hght_m_sq;
+            console.log("당신의 BMI는" + bmi + "입니다");
+            var input5 = prompt("변환하고 싶은 섭씨온도를 입력해주세요");
+            var temp_cel = Number(input5);
+            var temp_fah = temp_cel*9/5+32;
+            console.log("섭씨"+temp_cel+"도는 화씨"+temp_fah+"입니다.");
+            var input6 = prompt("길이를 파악하고 싶은 본문을 입력하세요");
+            var word_count = input6.length;
+            console.log("입력하신 문자열의 길이는"+word_count+"입니다.");
+
+
+
+        </script>
+    </body>
+</html>

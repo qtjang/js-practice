@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <Script>
+        // 1번문제: 1부터 100까지 합을 구하시오.
+        // var n = 1;
+        // var add = 0;
+        // while (n <= 100) {
+        //     add = add + n;
+        //     n++;
+        // }
+        // console.log(add);
+        // document.write("1부터 100까지의 합은 "+add+"입니다.");
+
+
+        //2번문제: 입력된 숫자의 개수와 합을 구하시오. 0 입력시 종료.
+            var c = 0;
+            var s = 0;
+            var n = Number(prompt("숫자를 입력해주세요. 0 입력시 종료됩니다."));
+        while(n != 0){
+            c++;
+            s = s+n;
+            console.log("숫자의 개수는 "+c+"이며 합은 "+s+"입니다.");
+            n = Number(prompt("숫자를 입력해주세요. 0 입력시 종료됩니다."));
+        }
+        document.write("입력하신 총 "+c+"개 숫자의 합은 "+s+"입니다.");
+
+
+        //3번문제: 1부터 100까지 짝수의 합을 구하시오.
+            var sum = 0;
+            for (i=1; i<=100; i++) {
+                if (i%2===0){
+                    sum=sum+i;
+                    console.log(sum);
+                }
+            }
+            document.write("1부터 100까지의 짝수의 합은 "+sum+"입니다.");
+
+        //4번문제: 100부터 1까지 역순으로 숫자를 출력하시오.
+            for(i2=100; i2>=1; i2--){
+                console.log(i2);
+            }
+    </Script>
+</body>
+</html>
