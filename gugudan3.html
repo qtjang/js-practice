@@ -9,10 +9,21 @@
     <h1> 구구단 출력 연습 </h1>
     <h2> 입력한 단의 구구단을 출력합니다. </h2>
     <script>
-        var n = Number(prompt("몇 단을 출력할까요?"))
+        var n = Number(prompt("몇 단을 출력할까요?"));
+        if(n<2){
+            alert("2부터 9까지의 값을 입력하세요.");
+            n = Number(prompt("몇 단을 출력할까요?"));
+        } else if(n>9){
+            alert("2부터 9까지의 값을 입력하세요.");
+            n = Number(prompt("몇 단을 출력할까요?"));
+        } else {
+            for(i=1;i<10;i++){
+            document.write(n+"*"+i+"="+n*i+"<br>");
+            }
+        }
         for(i=1;i<10;i++){
             document.write(n+"*"+i+"="+n*i+"<br>");
-        }
+        }      
     </script>
 </body>
 </html>
