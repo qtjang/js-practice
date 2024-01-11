@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 소수 출력하기 </title>
+</head>
+<body>
+    <h1> 연습문제 #3 </h1>
+    <h2> "1-10000"범위 안에서 지정한 숫자까지의 소수를 출력합니다. </h2>
+    상한 값: <input id="input" type="text">
+    <button onclick="input()">확인</button><br>
+    <script>
+        var input = function(){
+            var strnum = document.getElementById('input').value;
+            var max_num = Number(strnum);
+            console.log("max_num ="+ max_num);
+
+                var numbers = {
+                    "all" : [],
+                    "prime" : [],
+                    "addAll" : function(max_num){
+                        for(var i = 1 ; i <= max_num ; i++){
+                            this.all.push(i);
+                        };
+                        return this.all;
+                    },
+                    "isPrime" : function(number){
+                        var isPrime = true;
+                        for(var j = 2 ; j < number ; j++){
+                            if(number % j === 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        };
+                        return isPrime;
+                    },
+                    "addPrime" : function(number){
+                        if (isPrime=true){
+                            this.prime.push(number);
+                        }
+                        return this.prime;
+                    },
+                    "getAllPrimes" : function(index){
+                        document.write(this.prime[index]+'<br>');
+                    }
+                };
+                numbers.addAll(max_num);
+                console.log("all = " + numbers.all);
+                for(var k = 1; k < numbers.all.length; k++){
+                    if(numbers.isPrime(numbers.all[k])===true){
+                        numbers.addPrime(numbers.all[k]);
+                    } else {
+                        continue;
+                    };
+                };
+                console.log("prime = " + numbers.prime);
+                for(var l = 0; l < numbers.prime.length; l++) {
+                    numbers.getAllPrimes(l);
+                };      
+        };      
+    </script>
+</body>
+</html>
